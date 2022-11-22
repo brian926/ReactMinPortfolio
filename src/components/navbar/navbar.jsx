@@ -1,7 +1,10 @@
 import { FaSun,FaMoon } from 'react-icons/fa'
 import useDarkMode from '../../hooks/useDarkMode'
+import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
-import Home from '../home/home'
+
+const Home = React.lazy(() => import('../home/home'))
+const About = React.lazy(() => import('../about/about'))
 
 function NavBar() {
     return (
@@ -20,8 +23,8 @@ function NavBar() {
                 </div>
             </nav>
         <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/" element={<Suspense fallback={<div>Loading...</div>}><Home /></Suspense>} />
+            <Route path="/about" element={<Suspense fallback={<div>Loading...</div>}><About /></Suspense>} />
         </Routes>
       </Router>
 )}
@@ -35,7 +38,5 @@ const ThemeIcon = () => {
     </span>
   )
 }
-function About() {
-  return <h2>About</h2>
-}
+
 export default NavBar
