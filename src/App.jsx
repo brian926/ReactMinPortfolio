@@ -1,58 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import Home from './components/home'
+import { FaSun,FaMoon } from 'react-icons/fa'
+import useDarkMode from './hooks/useDarkMode'
 
 function App() {
-
   return (
-  <Router>
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/About">About</Link>
-          </li>
-        </ul>
-      </nav>
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/About">About</Link>
+            </li>
+            <li>
+              <ThemeIcon />
+            </li>
+          </ul>
+        </nav>
 
-      <Routes>
-        <Route path="/about" element={<About />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </div>
-  </Router>  
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </Router>  
   )
 }
 
-function Home() {
-  const [count, setCount] = useState(0)
+const ThemeIcon = () => {
+  const [darkTheme, setDarkTheme] = useDarkMode()
+  const handleMode = () => setDarkTheme(!darkTheme)
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <span onClick={handleMode}>
+      {darkTheme ? (<FaSun size='24' className='top-navigation-icon' />) : (<FaMoon size='24' className='top-navigation-icon' />)}
+    </span>
   )
 }
 
