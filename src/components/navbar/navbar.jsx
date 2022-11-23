@@ -1,6 +1,6 @@
-import { FaSun,FaMoon } from 'react-icons/fa'
+import { FaSun, FaMoon } from 'react-icons/fa'
 import useDarkMode from '../../hooks/useDarkMode'
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
 const Home = React.lazy(() => import('../home/home'))
@@ -8,6 +8,8 @@ const About = React.lazy(() => import('../about/about'))
 const TimeLine = React.lazy(() => import('../timeline/timeline'))
 
 function NavBar() {
+    const [isNavOpen, setIsNavOpen] = useState(false)
+
     return (
         <Router>
             <nav className='shadow-lg'>
@@ -21,18 +23,54 @@ function NavBar() {
                             </div>
                         </div>
                         <div className='hidden md:flex items-center space-x-3'>
-                            <ThemeIcon className='py-2 px-2 font-medium  rounded  transition duration-300' />
+                            <ThemeIcon className='top-navigation-icon' />
+                        </div>
+                        <div className="md:hidden flex items-center">
+                            <button className="outline-none" onClick={() => setIsNavOpen((prev) => !prev)}>
+                                <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                    x-show="!showMenu"
+                                    fill="none"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
                         </div>
                     </div>
                 </div>
+                <div className={isNavOpen ? "sm:hidden" : "hidden"}>
+                    <ul className="">
+                        <li>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/'>Home</Link>
+                        </li>
+                        <li>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/about'>About</Link>
+                        </li>
+                        <li>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/timeline'>Timeline</Link>
+                        </li>
+                    </ul>
+                </div>
             </nav>
         <Routes>
-            <Route path="/" element={<Suspense fallback={<div>Loading...</div>}><Home /></Suspense>} />
-            <Route path="/about" element={<Suspense fallback={<div>Loading...</div>}><About /></Suspense>} />
-            <Route path="/timeline" element={<Suspense fallback={<div>Loading...</div>}><TimeLine /></Suspense>} />
+            <Route path="/" element={<Suspense fallback={<Loading />}><Home /></Suspense>} />
+            <Route path="/about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
+            <Route path="/timeline" element={<Suspense fallback={<Loading />}><TimeLine /></Suspense>} />
         </Routes>
       </Router>
 )}
+
+const Loading = () => {
+    return (
+        <div className='"flex items-center justify-center flex-col text-center pt-20 pb-6"'>
+            <h2 className="text-4xl md:text-7x1 dark:text-white mb-1 mb:mb-3 font-bold">Loading...</h2>
+        </div>
+    )
+}
 
 const ThemeIcon = () => {
   const [darkTheme, setDarkTheme] = useDarkMode()
