@@ -5,26 +5,31 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 
 const Home = React.lazy(() => import('../home/home'))
 const About = React.lazy(() => import('../about/about'))
+const TimeLine = React.lazy(() => import('../timeline/timeline'))
 
 function NavBar() {
     return (
         <Router>
-            <nav className='flex items-center justify-between flex-wrap p-6'>
-                <div className='w-full block flex-grow lg:flex lg:items-center lg:w-auto'>
-                    <div className='text-sm lg:flex-grow'>
-                        <Link className='block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4' to="/">Home</Link>
-                    </div>
-                    <div className='text-sm lg:flex-grow'>
-                        <Link className='block mt-4 lg:inline-block lg:mt-0 hover:text-white mr-4' to="/about">About</Link>
-                    </div>
-                    <div>
-                        <ThemeIcon className='inline-block text-sm px-4 py-2 leading-none border rounded text-white border white hover:border-transparent hover:bg-white mt-4 lg:mt-0' />
+            <nav className='shadow-lg'>
+                <div className='max-w-6xl mx-auto px-4'>
+                    <div className='flex justify-between'>
+                        <div className='flex space-x-7'>
+                            <div className='hidden md:flex items-center space-x-1'>
+                                <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/">Home</Link>
+                                <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/about">About</Link>
+                                <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/timeline">Timeline</Link>
+                            </div>
+                        </div>
+                        <div className='hidden md:flex items-center space-x-3'>
+                            <ThemeIcon className='py-2 px-2 font-medium  rounded  transition duration-300' />
+                        </div>
                     </div>
                 </div>
             </nav>
         <Routes>
             <Route path="/" element={<Suspense fallback={<div>Loading...</div>}><Home /></Suspense>} />
             <Route path="/about" element={<Suspense fallback={<div>Loading...</div>}><About /></Suspense>} />
+            <Route path="/timeline" element={<Suspense fallback={<div>Loading...</div>}><TimeLine /></Suspense>} />
         </Routes>
       </Router>
 )}
