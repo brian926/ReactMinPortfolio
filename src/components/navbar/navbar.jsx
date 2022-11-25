@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 const Home = React.lazy(() => import('../home/home'))
 const About = React.lazy(() => import('../about/about'))
 const TimeLine = React.lazy(() => import('../timeline/timeline'))
+const Projects = React.lazy(() => import('../projects/projects'))
 
 function NavBar() {
     const [isNavOpen, setIsNavOpen] = useState(false)
@@ -20,6 +21,7 @@ function NavBar() {
                                 <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/">Home</Link>
                                 <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/about">About</Link>
                                 <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/timeline">Timeline</Link>
+                                <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/projects">Projects</Link>
                             </div>
                         </div>
                         <div className='hidden md:flex items-center space-x-3'>
@@ -53,6 +55,9 @@ function NavBar() {
                         <li>
                             <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/timeline'>Timeline</Link>
                         </li>
+                        <li>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/projects'>Projects</Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -60,6 +65,7 @@ function NavBar() {
             <Route path="/" element={<Suspense fallback={<Loading />}><Home /></Suspense>} />
             <Route path="/about" element={<Suspense fallback={<Loading />}><About /></Suspense>} />
             <Route path="/timeline" element={<Suspense fallback={<Loading />}><TimeLine /></Suspense>} />
+            <Route path="/projects" element={<Suspense fallback={<Loading />}><Projects /></Suspense>} />
         </Routes>
       </Router>
 )}
