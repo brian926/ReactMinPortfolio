@@ -10,6 +10,7 @@
     @apply text-gray-500
     mr-3 ml-4
     transition duration-300 ease-in-out 
-    hover:text-green-400 
+    hover:text-[#08D9D6]
+    dark:hover:text-[#F49D1A]
     cursor-pointer;
   }
