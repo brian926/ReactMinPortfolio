@@ -23,7 +23,7 @@ function PortfolioItem({title, imgUrl, stack, link, description}) {
                         </span>                
                     ))}
                 </p>
-                <p className='inline-block px-2 py-1'>{description}</p>
+                <p className='inline-block px-2 py-2'>{description}</p>
             </div>
         </a>
     )
