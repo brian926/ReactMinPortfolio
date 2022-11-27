@@ -47,16 +47,16 @@ function NavBar() {
                 <div className={isNavOpen ? "sm:hidden" : "hidden"}>
                     <ul className="">
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/'>Home</Link>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/' onClick={() => setIsNavOpen((prev) => !prev)}>Home</Link>
                         </li>
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/about'>About</Link>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/about' onClick={() => setIsNavOpen((prev) => !prev)}>About</Link>
                         </li>
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/timeline'>Timeline</Link>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/timeline' onClick={() => setIsNavOpen((prev) => !prev)}>Timeline</Link>
                         </li>
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/projects'>Projects</Link>
+                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/projects' onClick={() => setIsNavOpen((prev) => !prev)}>Projects</Link>
                         </li>
                     </ul>
                 </div>
