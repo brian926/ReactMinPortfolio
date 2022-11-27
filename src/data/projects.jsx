@@ -19,5 +19,12 @@ export default [
         stack: ['HTML', 'CSS', 'JavaScript', 'C#'],
         link: 'https://www.brianantunes.com/',
         description: 'My own personal website that is hosted completely within Azure. The frontend is utilizing Azure storaget to host a static site which then backs calls to our backend Azure Database.',
-    }
+    },
+    {
+        title: 'Brian\'s Portfolio',
+        imgUrl: '/assets/portfolio.png',
+        stack: ['Vite', 'React', 'Tailwind', 'JavaScript'],
+        link: 'https://github.com/brian926/ReactMinPortfolio',
+        description: 'This website! Check out the GitHub Repo here!',
+    },
 ]

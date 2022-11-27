@@ -5,9 +5,13 @@ function About() {
         <div className="flex items-center justify-center flex-col text-center pt-20 pb-6">
             <h2 className="text-4xl md:text-7x1 dark:text-white mb-1 mb:mb-3 font-bold">About Me and This Site</h2>
             <p className="text-base md:text-x1 mb-3 font-medium">A little about this site!</p>
-            <p className="text-sm max-w-xl mb-6 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Quo repudiandae facere repellat aspernatur consequuntur, quis architecto recusandae aliquam obcaecati. 
-            Itaque consequuntur dolorem nesciunt odio ad, mollitia iste asperiores quae repudiandae.</p>
+            <p className="text-sm max-w-xl mb-6 font-bold">As an Engineer, I am always looking to challenge myself. 
+                This site was a great way to do just that and an opportunity to learn more about Vite, React, and Tailwind. 
+                The site uses Vite and React as it's stack while using Tailwind for style.
+            </p>
+            <p className="text-sm max-w-xl mb-6 font-bold">
+                If you would like to contact me about the site, any questions, or any opportunities please feel free to do so below in the Contact form!
+            </p>
         </div>
     )
 }
