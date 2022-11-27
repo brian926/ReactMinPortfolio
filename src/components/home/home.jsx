@@ -6,7 +6,7 @@ function Home() {
             <h2 className="text-4xl md:text-7x1 dark:text-white mb-1 mb:mb-3 font-bold">Brian Antunes</h2>
             <div className="container px-5 py-2 mx-auto lg:px-32">
                 <div class="w-auto p-1 md:p-2">
-                    <img className="block object-cover mx-auto w-1/4 h-1/5 rounded-lg" src='/assets/headshot2.3.jpg'/>
+                    <img className="block object-cover mx-auto w-1/4 h-1/5 rounded-lg border-2 border-stone-900 dark:border-white" src='/assets/headshot2.3.jpg'/>
                 </div>
             </div>
             <p className="text-base md:text-x1 mb-3 font-medium">Software & System Engineer</p>
