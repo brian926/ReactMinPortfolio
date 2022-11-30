@@ -15,8 +15,8 @@ function NavBar() {
         <Router>
             <nav className='shadow-lg'>
                 <div className='max-w-6xl mx-auto px-4'>
-                    <div className='flex justify-between'>
-                        <div className='flex space-x-7'>
+                    <div className='flex h-10 md:justify-between justify-end items-center'>
+                        <div className='md:flex space-x-7'>
                             <div className='hidden md:flex items-center space-x-1'>
                                 <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/">Home</Link>
                                 <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/about">About</Link>
@@ -24,12 +24,12 @@ function NavBar() {
                                 <Link className='py-4 px-2 text-gray-500 font-semibold hover:text-black dark:hover:text-white transition duration-300' to="/projects">Projects</Link>
                             </div>
                         </div>
-                        <div className='hidden md:flex items-center space-x-3'>
+                        <div className='flex justify-end'>
                             <ThemeIcon className='top-navigation-icon' />
                         </div>
-                        <div className="md:hidden flex items-center">
+                        <div className="md:hidden flex">
                             <button className="outline-none" onClick={() => setIsNavOpen((prev) => !prev)}>
-                                <svg className=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                <svg className=" w-6 h-6 text-gray-500 hover:text-black dark:hover:text-white "
                                     x-show="!showMenu"
                                     fill="none"
                                     strokeLinecap="round"
@@ -47,16 +47,16 @@ function NavBar() {
                 <div className={isNavOpen ? "sm:hidden" : "hidden"}>
                     <ul className="">
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/' onClick={() => setIsNavOpen((prev) => !prev)}>Home</Link>
+                            <Link className="block text-sm px-2 py-4 hover:text-black dark:hover:text-white transition duration-300" to='/' onClick={() => setIsNavOpen((prev) => !prev)}>Home</Link>
                         </li>
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/about' onClick={() => setIsNavOpen((prev) => !prev)}>About</Link>
+                            <Link className="block text-sm px-2 py-4 hover:text-black dark:hover:text-white transition duration-300" to='/about' onClick={() => setIsNavOpen((prev) => !prev)}>About</Link>
                         </li>
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/timeline' onClick={() => setIsNavOpen((prev) => !prev)}>Timeline</Link>
+                            <Link className="block text-sm px-2 py-4 hover:text-black dark:hover:text-white transition duration-300" to='/timeline' onClick={() => setIsNavOpen((prev) => !prev)}>Timeline</Link>
                         </li>
                         <li>
-                            <Link className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300" to='/projects' onClick={() => setIsNavOpen((prev) => !prev)}>Projects</Link>
+                            <Link className="block text-sm px-2 py-4 hover:text-black dark:hover:text-white transition duration-300" to='/projects' onClick={() => setIsNavOpen((prev) => !prev)}>Projects</Link>
                         </li>
                     </ul>
                 </div>
