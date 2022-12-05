@@ -10,7 +10,7 @@ export default [
         title: 'The Quarry Barbershop',
         imgUrl: '/assets/thequarry.png',
         stack: ['HTML', 'CSS'],
-        link: 'thequarrybarbershop.netlify.app',
+        link: 'https://thequarrybarbershop.netlify.app',
         description: 'A barbershop website that displays the team members of the Quarry Barbershop, hours of operation, and you can even book an appointment online.',
     },
     {
