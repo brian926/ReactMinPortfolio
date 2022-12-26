@@ -17,7 +17,7 @@ function Home() {
                 In addition to my technical skills, I am also a certified IT professional with multiple industry certifications, including Azure System Admin, AWS Fundamentals, Red Hat System Admin, and CCNA.
             </p>
             <p className="text-sm max-w-xl mb-6 font-bold px-2">
-                As an engineer, my goal is to bring innovative projects to life and create world-class solutions. I am highly passionate about technology and always strive to push the boundaries of what is possible. I believe that my expertise and dedication to developing effective solutions make me a valuable asset in any team or project."
+                As an engineer, my goal is to bring innovative projects to life and create world-class solutions. I am highly passionate about technology and always strive to push the boundaries of what is possible. I believe that my expertise and dedication to developing effective solutions make me a valuable asset in any team or project.
             </p>
         </div>
     )
