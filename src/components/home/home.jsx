@@ -11,13 +11,13 @@ function Home() {
             </div>
             <p className="text-base md:text-x1 mb-3 font-medium">Software & System Engineer</p>
             <p className="text-sm max-w-xl mb-6 font-bold px-2">
-                Hi, I'm Brian!
-                I am a Software and System Engineer based in Connecticut and am proficient in both Frontend and Backend development. I have extensive knowledge in PowerShell, SQL, HTML, CSS, Javascript, Node.Js, MongoDB, Go, and Python.
+                Hello! My name is Brian and I am a Software and Systems Engineer based in Connecticut. I have a wide range of technical skills, including proficiency in Frontend and Backend development, as well as expertise in various programming languages such as PowerShell, SQL, HTML, CSS, JavaScript, Node.js, MongoDB, Go, and Python.
             </p>
             <p className="text-sm max-w-xl mb-6 font-bold px-2">
-                I am also a certified IT professional with numerous certifications, including Azure System Admin, AWS Fundamentals, Red Hat System Admin, and CCNA.
-                As an engineer, I aspire to help bring creative projects to life and demonstrate my commitment to developing world-class solutions.
-                With a passion for Technology, I hope to challenge the scope and create more effective solutions!
+                In addition to my technical skills, I am also a certified IT professional with multiple industry certifications, including Azure System Admin, AWS Fundamentals, Red Hat System Admin, and CCNA.
+            </p>
+            <p className="text-sm max-w-xl mb-6 font-bold px-2">
+                As an engineer, my goal is to bring innovative projects to life and create world-class solutions. I am highly passionate about technology and always strive to push the boundaries of what is possible. I believe that my expertise and dedication to developing effective solutions make me a valuable asset in any team or project.
             </p>
         </div>
     )
