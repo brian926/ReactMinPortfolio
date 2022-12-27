@@ -1,5 +1,12 @@
 export default [
     {
+        title: 'Bytez',
+        imgUrl: '/assets/bytez.png',
+        stack: ['JavaScript', 'React', 'Vite', 'Go', 'Redis', 'PostgreSQL', 'Docker'],
+        link: 'https://bytez.us',
+        description: 'This website is a URL shortener that allows users to shorten long URLs into easily shareable links. The shorter URLs are stored in Redis for fast retrieval and in PostgreSQL for long-term data storage.',
+    },
+    {
         title: 'Star Gazer\'s Apod',
         imgUrl: '/assets/apod.png',
         stack: ['NodeJS', 'Express', 'JavaScript', 'Bootstrap'],
